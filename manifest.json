@@ -18,7 +18,7 @@
    },
 
    "permissions": [
-        "http://pythonclub.com.br",
+        "http://pythonclub.com.br/",
    ],
 
    "author": "Lucas Magnum <lucasmagnumlopes@gmail.com>"
