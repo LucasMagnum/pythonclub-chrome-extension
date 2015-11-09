@@ -1,0 +1,25 @@
+{
+   "name": "PythonClub",
+   "version": "1.0",
+   "manifest_version": 2,
+
+   "description": "PythonClub é um blog colaborativo escrito e mantido pela comunidade Python.",
+
+   "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+   },
+
+   "browser_action":{
+      "default_icon": "images/icon.png",
+      "default_title": "PythonClub - Blog",
+      "default_popup": "pythonclub.html"
+   },
+
+   "permissions": [
+        "http://pythonclub.com.br",
+   ],
+
+   "author": "Lucas Magnum <lucasmagnumlopes@gmail.com>"
+}
