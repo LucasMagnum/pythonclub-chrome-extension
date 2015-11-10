@@ -1,18 +1,16 @@
+var posts = []
+
 function showPost(post){
-
     var postJSON = JSON.parse(post[0]);
-
     var postTemplate = "<a class='post-link' href='" + postJSON.url + "' target='_blank'>" + postJSON.title + "</a>";
-
     var postList = document.getElementById('post-list');
 
     postList.innerHTML = postList.innerHTML + postTemplate;
-
+    posts.push(postJSON);
 }
 
 function showPosts(pageHtml){
     var postsRegex = new RegExp(/{"url": "[-a-zA-Z0-9@:%_\+.~#?&\/\/=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)", "title": "((?:\\.|[^"\\])*)"}/g);
-
     var post;
 
     while ((post = postsRegex.exec(pageHtml)) !== null) {
