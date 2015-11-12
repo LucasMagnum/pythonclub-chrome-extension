@@ -2,16 +2,24 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-
         <title>PythonClub - Blog</title>
 
         <link rel="stylesheet" type="text/css" href="static/css/pythonclub.css">
-
-        <script type="text/javascript" src="static/js/pythonclub.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/css/load.css">
     </head>
     <body>
         <img src="images/pythonclub.png" class="logo">
-        <section id="post-list"></section>
 
+        <section id="post-list">
+
+            <div id="failed-box" style="display:none; visibility:hidden;">
+                <p>Não foi possível carregar os dados!</p>
+                <p><a href="#">Tente novamente</a></p>
+            </div>
+
+        </section>
+
+        <script type="text/javascript" src="static/js/pace.min.js"></script>
+        <script type="text/javascript" src="static/js/pythonclub.js"></script>
     </body>
 </html>

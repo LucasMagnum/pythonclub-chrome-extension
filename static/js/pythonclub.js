@@ -19,7 +19,7 @@ function getPosts(){
             savePosts(xhttp.responseText);
             Pace.on('done', showPosts);
         } else {
-            // TODO: Failed message
+            Pace.on('done', showFailedBox);
         }
     }
 
@@ -41,6 +41,13 @@ function savePosts(pageHtml){
     }
 
 }
+
+function showFailedBox(){
+    var failedBox = document.getElementById('failed-box');
+    failedBox.style.visibility = "visible";
+    failedBox.style.display = "block";
+}
+
 
 window.onload = getPosts;
 
