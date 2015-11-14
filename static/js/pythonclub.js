@@ -23,7 +23,7 @@ function getPosts(){
         }
     }
 
-    xhttp.open('GET', 'http://pythonclub.cm.br/', true);
+    xhttp.open('GET', 'http://pythonclub.com.br/', true);
     xhttp.send();
 }
 
