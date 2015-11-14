@@ -23,7 +23,7 @@ function getPosts(){
         }
     }
 
-    xhttp.open('GET', 'http://pythonclub.com.br/', true);
+    xhttp.open('GET', 'http://pythonclub.cm.br/', true);
     xhttp.send();
 }
 
@@ -44,8 +44,14 @@ function savePosts(pageHtml){
 
 function showFailedBox(){
     var failedBox = document.getElementById('failed-box');
+
     failedBox.style.visibility = "visible";
     failedBox.style.display = "block";
+
+    var link = failedBox.querySelector('a');
+    link.onclick = function(){
+        window.location.reload();
+    }
 }
 
 
