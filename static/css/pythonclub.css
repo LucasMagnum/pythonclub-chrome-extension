@@ -12,6 +12,10 @@ body {
     display: block;
 }
 
+.post-list {
+    visibility: hidden;
+}
+
 .post-link {
     color: rgb(51, 51, 50);
     border: 1px dashed #999;
@@ -20,9 +24,18 @@ body {
     display: block;
 }
 
-#post-list {
-    visibility: hidden;
+
+#search-box input[type=text] {
+    font-size: 1.2em;
+    width: 90%;
+    margin: 1% auto;
+    display: block;
+    font-weight: bold;
+    padding: 0.2em;
+    font-family: sans-serif;
+    color: #9C9C9C;
 }
+
 
 #failed-box {
     color: rgb(51, 51, 50);

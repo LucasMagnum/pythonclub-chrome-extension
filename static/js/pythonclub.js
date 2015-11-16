@@ -1,5 +1,6 @@
 var posts = [];
-var postList = document.getElementById('post-list');
+var postList = document.getElementById('posts');
+var searchBox = document.getElementById('search-box')
 
 function showPosts(){
     /*
@@ -15,6 +16,7 @@ function showPosts(){
         postList.innerHTML = postList.innerHTML + postTemplate;
     }
     postList.style.visibility = "visible";
+    searchBox.style.visibility = "visible";
 }
 
 function getPosts(){
@@ -24,15 +26,17 @@ function getPosts(){
     */
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange=function() {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            savePosts(xhttp.responseText);
-            Pace.on('done', showPosts);
-        } else {
-            Pace.on('done', showFailedBox);
+        if (xhttp.readyState == 4){
+            if (xhttp.status == 200) {
+                savePosts(xhttp.responseText);
+                Pace.on('done', showPosts);
+            } else {
+                Pace.on('done', showFailedBox);
+            }
         }
     }
 
-    xhttp.open('GET', 'http://pythonclubx.com.br/', true);
+    xhttp.open('GET', 'http://pythonclub.com.br/', true);
     xhttp.send();
 }
 
