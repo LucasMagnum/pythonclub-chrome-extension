@@ -2,6 +2,10 @@ var posts = [];
 var postList = document.getElementById('posts');
 var searchBox = document.getElementById('search-box')
 
+window.onload = getPosts;
+searchBox.onkeyup = searchPosts;
+
+
 function showPosts(){
     /*
         Percorre o array `posts` e mostra dentro do elemento `postList`
@@ -56,7 +60,6 @@ function savePosts(pageHtml){
         var postJSON = JSON.parse(post[0]);
         posts.push(postJSON);
     }
-
 }
 
 function showFailedBox(){
@@ -72,5 +75,21 @@ function showFailedBox(){
     }
 }
 
-window.onload = getPosts;
+function searchPosts(event){
+    var postsLinks = document.getElementsByClassName('post-link');
+
+    for (var i=0; i<postsLinks.length; i++){
+        var post = postsLinks[i];
+
+        if (post.text.toLowerCase().search(event.target.value) == -1){
+            post.style.visibility = 'hidden';
+            post.style.display = 'none';
+        } else {
+            post.style.visibility = 'visible';
+            post.style.display = 'block';
+        }
+
+    }
+}
+
 

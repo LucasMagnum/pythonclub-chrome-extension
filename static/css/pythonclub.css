@@ -24,6 +24,10 @@ body {
     display: block;
 }
 
+.post-link:last-child {
+    border-bottom: 1px dashed #999;
+}
+
 
 #search-box input[type=text] {
     font-size: 1.2em;
