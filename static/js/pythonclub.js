@@ -14,6 +14,7 @@ function showPosts(){
 
         postList.innerHTML = postList.innerHTML + postTemplate;
     }
+    postList.style.visibility = "visible";
 }
 
 function getPosts(){
@@ -31,7 +32,7 @@ function getPosts(){
         }
     }
 
-    xhttp.open('GET', 'http://pythonclub.com.br/', true);
+    xhttp.open('GET', 'http://pythonclubx.com.br/', true);
     xhttp.send();
 }
 

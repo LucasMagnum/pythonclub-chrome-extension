@@ -20,6 +20,10 @@ body {
     display: block;
 }
 
+#post-list {
+    visibility: hidden;
+}
+
 #failed-box {
     color: rgb(51, 51, 50);
     border: 1px dashed #999;
