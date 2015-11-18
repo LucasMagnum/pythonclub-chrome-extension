@@ -81,7 +81,7 @@ function searchPosts(event){
     for (var i=0; i<postsLinks.length; i++){
         var post = postsLinks[i];
 
-        if (post.text.toLowerCase().search(event.target.value) == -1){
+        if (post.text.toLowerCase().search(event.target.value.toLowerCase()) == -1){
             post.style.visibility = 'hidden';
             post.style.display = 'none';
         } else {
